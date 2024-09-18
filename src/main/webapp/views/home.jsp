@@ -25,7 +25,7 @@
 			<div class="col-sm-6">
 				<ul class="list-inline right-topbar pull-right">
 					<li> <p> ${sessionScope.account.fullname}</p>
-						| <a href="${pageContext.request.contextPath }/logout">Đăng xuất </a>
+						| <a href="${pageContext.request.contextPath }/login">Đăng xuất </a>
 							<li><i class="search fa fa-search search-button"></i></li>
 				</ul>
 			</div>
