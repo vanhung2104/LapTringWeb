@@ -70,7 +70,6 @@ public class UserServiceImpl implements IUserService {
 
 		try {
 			IUserService userService = new UserServiceImpl();
-			boolean kt = userService.resetpassword("hung6", "vanhung21@gmail.com", "5");
 			System.out.println(userService.findByUsername("hung6"));
 
 		} catch (Exception e) {
