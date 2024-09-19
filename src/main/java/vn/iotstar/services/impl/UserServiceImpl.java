@@ -35,6 +35,15 @@ public class UserServiceImpl implements IUserService {
 		userDao.insert(new UserModel(email, username, fullname, password, null, 5, phone, date));
 		return true;
 	}
+	
+	@Override
+	public boolean resetpassword(String username, String email, String password) {
+		UserModel user = new UserModel();
+		user = userDao.findByUsername(username);
+		user.setPassword(password);
+		userDao.update(user);
+		return true;
+	}
 
 	@Override
 	public boolean checkExistEmail(String email) {
@@ -61,7 +70,8 @@ public class UserServiceImpl implements IUserService {
 
 		try {
 			IUserService userService = new UserServiceImpl();
-			System.out.println(userService.login("hung1", "123"));
+			boolean kt = userService.resetpassword("hung6", "vanhung21@gmail.com", "5");
+			System.out.println(userService.findByUsername("hung6"));
 
 		} catch (Exception e) {
 

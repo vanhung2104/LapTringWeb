@@ -59,4 +59,14 @@
     <servlet-name>RegisterController</servlet-name>
     <url-pattern>/RegisterController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ForgotController</display-name>
+    <servlet-name>ForgotController</servlet-name>
+    <servlet-class>vn.iotstar.controllers.ForgotController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgotController</servlet-name>
+    <url-pattern>/ForgotController</url-pattern>
+  </servlet-mapping>
 </web-app>
