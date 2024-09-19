@@ -2,8 +2,6 @@ package vn.iotstar.controllers;
 
 import java.io.IOException;
 
-
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -24,8 +22,24 @@ public class LoginController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		RequestDispatcher rd = req.getRequestDispatcher("/views/login.jsp");
-		rd.forward(req, resp);
+		HttpSession session = req.getSession(false);
+		if (session != null && session.getAttribute("account") != null) {
+			resp.sendRedirect(req.getContextPath() + "/waiting");
+			return;
+		}
+		// Check cookie
+		Cookie[] cookies = req.getCookies();
+		if (cookies != null) {
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals("uname")) {
+					session = req.getSession(true);
+					session.setAttribute("uname", cookie.getValue());
+					resp.sendRedirect(req.getContextPath() + "/waiting");
+					return;
+				}
+			}
+		}
+		req.getRequestDispatcher("views/login.jsp").forward(req, resp);
 	}
 
 	@Override
@@ -71,6 +85,5 @@ public class LoginController extends HttpServlet {
 		cookie.setMaxAge(30 * 60);
 		response.addCookie(cookie);
 	}
-
 
 }

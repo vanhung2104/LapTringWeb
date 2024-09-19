@@ -145,7 +145,7 @@ to {
 </style>
 </head>
 <body>
-	<form action="register" method="post">
+	<form action="/LTWed9.9/register" method="post">
 		<h2>Tạo tài khoản mới</h2>
 		<c:if test="${alert !=null}">
 			<h3 class="alert alert danger">${alert}</h3>
