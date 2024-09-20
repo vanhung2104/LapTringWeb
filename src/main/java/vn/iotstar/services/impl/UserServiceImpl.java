@@ -70,7 +70,7 @@ public class UserServiceImpl implements IUserService {
 
 		try {
 			IUserService userService = new UserServiceImpl();
-			System.out.println(userService.findByUsername("hung6"));
+			System.out.println(userService.login("hung", "123"));
 
 		} catch (Exception e) {
 
