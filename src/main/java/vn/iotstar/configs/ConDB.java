@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConDB {
-	private final String serverName = "DESKTOP-EQ56E8C\\VANHUNG";
+	private final String serverName = "localhost";
 
 	private final String dbName = "ltwebst2";
 

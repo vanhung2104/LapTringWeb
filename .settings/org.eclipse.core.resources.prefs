@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/decorators/web.jsp=UTF-8
+encoding//src/main/webapp/commons/web/topbar.jsp=UTF-8
+encoding//src/main/webapp/views/admin/category-add.jsp=UTF-8
+encoding//src/main/webapp/views/admin/category-list.jsp=UTF-8
 encoding//src/main/webapp/views/forgot.jsp=UTF-8
+encoding//src/main/webapp/views/home.jsp=UTF-8
+encoding//src/main/webapp/views/shop-account.jsp=UTF-8
